@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link href='https://fonts.googleapis.com/css?family=Baloo Bhai' rel='stylesheet'>
+    <style>
+        body {
+            overflow: scroll;
+
+            font-size: 22px;
+            color: white;
+            margin: 0px;
+            padding: 0px;
+            background: url('imgp/removingbackgroundimages_Unsplash.jpeg')no-repeat center;
+            background-size: 1920px 1480px;
+        }
+
+        .container {}
+
+        #title {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            margin-top: 100px;
+            /* margin-left: 620px;  */
+            font-size: 3rem;
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: right;
+        }
+
+        #navbar ul {
+            display: flex;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navbar ul li a {
+            font-family: 'Baloo Bhai';
+            color: white;
+            display: block;
+            padding: 3px 20px;
+            border-radius: 15px;
+            text-decoration: none;
+        }
+
+        #navbar ul li a:hover {
+            color: purple;
+        }
+
+        .box:hover {
+            background-color: aliceblue;
+        }
+
+        .profile {
+            border: 2px solid white;
+            border-radius: 20px;
+        }
+
+        .profile:hover {
+            border-color: purple;
+            background-color: none;
+        }
+
+        .formgrp {
+            display: flex;
+            justify-content: center;
+            padding: 8px;
+        }
+
+        #name {
+            font-family: 'Baloo Bhai';
+            font-size: 1rem;
+            padding-right: 211px;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 20px;
+        }
+
+        #btn {
+            font-family: 'Baloo Bhai';
+            margin: 0px 10px;
+            color: white;
+            background-color: black;
+            padding: 4px 14px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 400px) {
+            #name {
+                font-family: 'Baloo Bhai';
+                padding-right: 140px;
+                padding-left: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-radius: 20px;
+            }
+
+            #title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <div class="logo">
+
+
+                <ul>
+                    <li class="item"><a href="#" class="box">Gmail</a></li>
+                    <li class="item"><a href="#" class="box">images</a></li>
+                    <li class="item"><a href="#">
+                            <img class="profile"
+                                src="https://lh3.googleusercontent.com/ogw/AOh-ky1EUzb7s14r3K2joX0D5tKUgX0HaXb-8gX3p3eX=s32-c-mo"
+                                srcset="https://lh3.googleusercontent.com/ogw/AOh-ky1EUzb7s14r3K2joX0D5tKUgX0HaXb-8gX3p3eX=s32-c-mo 1x, https://lh3.googleusercontent.com/ogw/AOh-ky1EUzb7s14r3K2joX0D5tKUgX0HaXb-8gX3p3eX=s64-c-mo 2x "
+                                alt="" aria-hidden="true" data-noaft=""></a></li>
+                </ul>
+        </nav>
+        <div id="title">
+            <h1>Google</h1>
+        </div>
+        <div class="searchbar">
+            <form action="">
+                <div class="formgrp">
+                    <input type="text" name="name" id="name" placeholder="Search Google or Type url">
+                </div>
+                <div class="formgrp">
+                    <button id="btn">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
