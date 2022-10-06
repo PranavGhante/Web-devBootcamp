@@ -15,17 +15,17 @@
             color: white;
             margin: 0px;
             padding: 0px;
-            background: url('imgp/removingbackgroundimages_Unsplash.jpeg')no-repeat center;
+            background: url('imgp/background.jpg')no-repeat center;
             background-size: 1920px 1480px;
+            /* position: fixed; */
         }
 
-        .container {}
 
         #title {
             display: flex;
             justify-content: center;
             padding: 10px;
-            margin-top: 100px;
+            margin-top: 35px;
             /* margin-left: 620px;  */
             font-size: 3rem;
         }
@@ -71,45 +71,163 @@
             background-color: none;
         }
 
-        .formgrp {
+        .searchbar {
             display: flex;
             justify-content: center;
-            padding: 8px;
+            align-items: center;
+        }
+
+        .formgrp {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 30px;
+            margin-bottom: 10px;
+            width: 100%;
+            max-width: 750px;
         }
 
         #name {
+            width: 100%;
+            display: flex;
+            justify-content: center;
             font-family: 'Baloo Bhai';
-            font-size: 1rem;
-            padding-right: 211px;
-            padding-left: 10px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            border-radius: 20px;
+            flex: 1;
+            border: 0;
+            outline: none;
+            padding: 15px 20px;
+            font-size: 20px;
+            background: transparent;
+            color: #cac7ff;
         }
 
-        #btn {
+        ::placeholder {
+            color: #cac7ff;
+        }
+
+        .formgrp button {
+            border: 0;
+            border-radius: 50%;
+            background: #58629b;
+            cursor: pointer;
+        }
+
+        #formgrp1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        #formgrp1 button a {
+            text-decoration: none;
             font-family: 'Baloo Bhai';
             margin: 0px 10px;
-            color: white;
-            background-color: black;
-            padding: 4px 14px;
-            border: 2px solid grey;
+            color: #716cd6;
             border-radius: 10px;
             cursor: pointer;
         }
 
+        #formgrp1 button {
+            border-radius: 20px;
+            text-decoration: none;
+            margin: 10px 20px;
+            background-color: seashell;
+        }
+
+        #formgrp1 button a:hover {
+            color: white;
+        }
+
+        #formgrp1 button:hover {
+            background-color: purple;
+        }
+
+        .searchbar {
+            margin-bottom: 100px;
+        }
+
+        footer {
+            background: #f2f2f2;
+            margin-top: 190px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .uU7dJb {
+            padding: 15px 30px;
+            border-bottom: 1px solid #dadce0;
+            font-size: 15px;
+            color: #70757a;
+        }
+
+        #fbar {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            padding: 20px 20px;
+        }
+
+        .f1 a {
+            padding: 5px;
+            margin: 8px;
+            text-decoration: none;
+            border-bottom: 1px solid #dadce0;
+            font-size: 15px;
+            color: #70757a;
+        }
+
+        .f2 a {
+            padding: 5px;
+            margin: 8px;
+            text-decoration: none;
+            border-bottom: 1px solid #dadce0;
+            font-size: 15px;
+            color: #70757a;
+            text-underline-offset: 0;
+        }
+
         @media only screen and (max-width: 400px) {
-            #name {
-                font-family: 'Baloo Bhai';
-                padding-right: 140px;
-                padding-left: 10px;
-                padding-top: 10px;
-                padding-bottom: 10px;
+            .formgrp {
+                width: 92%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgba(255, 255, 255, 0.5);
                 border-radius: 20px;
+                margin-bottom: 10px;
+            }
+
+            #name {
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                font-family: 'Baloo Bhai';
+                flex: 1;
+                border: 0;
+                outline: none;
+                padding: 0px 2px;
+                background: transparent;
+                color: #cac7ff;
+            }
+
+            .formgrp button {
+                border: 0;
+                border-radius: 50%;
+                background: #58629b;
+                cursor: pointer;
+                width: fit-content;
+                height: fit-content;
             }
 
             #title {
-                font-size: 2rem;
+                font-size: 1.5rem;
+            }
+
+            #fbar {
+                display: flex;
+                justify-content: space-between;
             }
         }
     </style>
@@ -122,8 +240,8 @@
 
 
                 <ul>
-                    <li class="item"><a href="#" class="box">Gmail</a></li>
-                    <li class="item"><a href="#" class="box">images</a></li>
+                    <li class="item"><a href="https://mail.google.com/mail/" class="box">Gmail</a></li>
+                    <li class="item"><a href="https://www.google.co.in/imghp?hl=en&ogbl" class="box">images</a></li>
                     <li class="item"><a href="#">
                             <img class="profile"
                                 src="https://lh3.googleusercontent.com/ogw/AOh-ky1EUzb7s14r3K2joX0D5tKUgX0HaXb-8gX3p3eX=s32-c-mo"
@@ -135,16 +253,36 @@
             <h1>Google</h1>
         </div>
         <div class="searchbar">
-            <form action="">
+            <form action="https://www.google.com/search" method="get">
                 <div class="formgrp">
-                    <input type="text" name="name" id="name" placeholder="Search Google or Type url">
+                    <input type="text" name="q" id="name" placeholder="Search Google or Type url">
+                    <button type="Submit"><img src="imgp/search.png" alt=""></button>
                 </div>
-                <div class="formgrp">
-                    <button id="btn">Search</button>
+                <div id="formgrp1">
+                    <button><a href="#">Google Search</a></button>
+                    <button><a href="https://www.google.com/doodles">I'm Feeling Good</a> </button>
                 </div>
             </form>
         </div>
-    </div>
+        <footer>
+            <div class="uU7dJb">India</div>
+            <nav id="fbar">
+                <div class="f1">
+                    <a href="https://about.google/?utm_source=google-IN&utm_medium=referral&utm_campaign=hp-footer&fg=1"
+                        class="box1">About</a>
+                    <a href="https://www.google.com/intl/en_in/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1"
+                        class="box1">Advertising</a>
+                    <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1"
+                        class="box1">Business</a>
+                    <a href="https://google.com/search/howsearchworks/?fg=1" class="box1">How Search Works</a>
+                </div>
+                <div class="f2">
+                    <a href="https://policies.google.com/privacy?hl=en-IN&fg=1" class="box1">Privacy</a>
+                    <a href="https://policies.google.com/terms?hl=en-IN&fg=1" class="box1">Terms</a>
+                    <a href="#" class="box1">Settings</a>
+                </div>
+            </nav>
+        </footer>
 </body>
 
 </html>
